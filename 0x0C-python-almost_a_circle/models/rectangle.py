@@ -79,7 +79,7 @@ class Rectangle(Base):
         self.setter_validation("y", value)
         self.__y = value
 
-@staticmethod
+    @staticmethod
     def setter_validation(attribute, value):
         if type(value) != int:
             raise TypeError("{} must be an integer".format(attribute))
@@ -95,4 +95,15 @@ class Rectangle(Base):
             Returns the area of the rectangle
         '''
         return (self.height * self.width)
+
+    def display(self):
+        '''
+            Prints to stdout the representation of the rectangle
+        '''
+        rectangle = ""
+        print("\n" * self.y, end="")
+        for i in range(self.height):
+            rectangle += (" " * self.x) + ("#" * self.width) + "\n"
+        print(rectangle, end="")
+
 
