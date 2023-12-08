@@ -14,3 +14,15 @@ class Square(Rectangle):
         """
         super().__init__(size, size, x, y, id)
 
+        @property
+    def size(self):
+        """module Square size getter
+        """
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        """module Square size setter
+        """
+        self.width = value
+        self.height = value
