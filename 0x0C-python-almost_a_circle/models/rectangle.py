@@ -90,4 +90,9 @@ class Rectangle(Base):
             raise ValueError("{} must be > 0".format(attribute))
 
 
+    def area(self):
+        '''
+            Returns the area of the rectangle
+        '''
+        return (self.height * self.width)
 
